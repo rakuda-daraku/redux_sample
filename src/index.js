@@ -6,9 +6,11 @@ import todoApp from './reducers'
 import App from './components/App';
 
 let store = createStore(todoApp);
+// store.dispatch(addTodo('Hello World!'));
+// console.log(store.getState());
 
-render(
-  <Provider>
+render (
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
